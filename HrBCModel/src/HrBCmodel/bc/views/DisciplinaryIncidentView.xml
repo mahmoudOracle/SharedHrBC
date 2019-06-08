@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DisciplinaryIncidentView"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="model.shared.extensions.ExtViewRowImpl"
+  ComponentClass="model.shared.extensions.ExtViewObjectImpl"
+  FetchMode="FETCH_AS_NEEDED"
+  PageIterMode="Full">
+  <ViewAccessor
+    Name="EmployeesView1"
+    ViewObjectName="HrBCmodel.bc.views.EmployeesView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CustomersView1"
+    ViewObjectName="HrBCmodel.bc.views.CustomersView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefVerdict1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefVerdict"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefVerdict1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefCorrectiveAction1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefCorrectiveAction"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefCorrectiveAction1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefIndcidentStatus1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefIndcidentStatus"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefIndcidentStatus1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefRaisedBy1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefRaisedBy"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefRaisedBy1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Verdict"
+    ListVOName="SharedStaticLOVAppModule_RefVerdict1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Verdict"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Verdict"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_CorrectiveAction"
+    ListVOName="SharedStaticLOVAppModule_RefCorrectiveAction1_1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="CorrectiveAction"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Action"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_IncidentStatus"
+    ListVOName="SharedStaticLOVAppModule_RefIndcidentStatus1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="IncidentStatus"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Incident"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="EmployeeSwitchLov"
+    ListVOName="EmployeesView1"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="IncidentRaisedBy"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="EmployeeId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="CustomerSwitchLov"
+    ListVOName="CustomersView1"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="IncidentRaisedBy"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CustomerId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+      <Item Value="Mobile"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_RaisedBy"
+    ListVOName="SharedStaticLOVAppModule_RefRaisedBy1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="RaisedBy"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="RaisedByName"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="RaisedByName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="DisciplinaryIncident"
+    Entity="HrBCmodel.bc.entities.DisciplinaryIncident"/>
+  <ViewAttribute
+    Name="DisciplinaryIncidentId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="DisciplinaryIncidentId"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="DISCIPLINARY_INCIDENT_ID"/>
+  <ViewAttribute
+    Name="IncidentRaisedBy"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="IncidentRaisedBy"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="INCIDENT_RAISED_BY"
+    LOVFinder="RaisedByName"
+    LOVName="EmployeeSwitchLov">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="input_text_lov"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="RaisedBy"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR"
+    LOVName="LOV_RaisedBy">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="IncidentDate"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="IncidentDate"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="INCIDENT_DATE"/>
+  <ViewAttribute
+    Name="ViolationDescription"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ViolationDescription"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="VIOLATION_DESCRIPTION"/>
+  <ViewAttribute
+    Name="EmployeeStatment"
+    PrecisionRule="true"
+    EntityAttrName="EmployeeStatment"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="EMPLOYEE_STATMENT"/>
+  <ViewAttribute
+    Name="Verdict"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Verdict"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="VERDICT"
+    LOVName="LOV_Verdict">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CorrectiveAction"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="CorrectiveAction"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="CORRECTIVE_ACTION"
+    LOVName="LOV_CorrectiveAction">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CorrectiveActionText"
+    PrecisionRule="true"
+    EntityAttrName="CorrectiveActionText"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="CORRECTIVE_ACTION_TEXT"/>
+  <ViewAttribute
+    Name="IncidentStatus"
+    PrecisionRule="true"
+    EntityAttrName="IncidentStatus"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="INCIDENT_STATUS"
+    LOVName="LOV_IncidentStatus">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="CREATED_BY"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="CreatedOn"
+    PrecisionRule="true"
+    EntityAttrName="CreatedOn"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="CREATED_ON"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="ModifiedBy"
+    PrecisionRule="true"
+    EntityAttrName="ModifiedBy"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="MODIFIED_BY"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="ModifiedOn"
+    PrecisionRule="true"
+    EntityAttrName="ModifiedOn"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="MODIFIED_ON"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="Version"
+    PrecisionRule="true"
+    EntityAttrName="Version"
+    EntityUsage="DisciplinaryIncident"
+    AliasName="VERSION"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DisciplinaryHistoryView"
+    ViewLink="HrBCmodel.bc.viewLinks.DisciplinaryHistoryFk3Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DisciplinaryIncidentFilesView"
+    ViewLink="HrBCmodel.bc.viewLinks.DisciplinaryIncidentFilFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RefBrand"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  RowClass="HrBCmodel.bc.staticLOV.RefBrandRowImpl"
+  ComponentClass="HrBCmodel.bc.staticLOV.RefBrandImpl"
+  FetchMode="FETCH_AS_NEEDED"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="HrBCmodel.bc.staticLOV.RefBrand_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewAccessor
+    Name="RefCarModel1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefCarModel"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="RefCarModelCriteria"
+      FullName="HrBCmodel.bc.staticLOV.RefCarModel.RefCarModelCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="brandIdParam">
+        <TransientExpression
+          Name="ExpressionScript"
+          trustMode="untrusted"
+          CodeSourceName="RefBrand"/>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ViewAttribute
+    Name="Id"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="$none$"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="Brand"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    SQLType="VARCHAR"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="Id"/>
+  </AttrArray>
+  <ViewLinkAccessor
+    Name="RefCarModel"
+    ViewLink="HrBCmodel.bc.viewLinks.ModelFkBrandLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <StaticList
+    Rows="7"
+    Columns="2"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="HrBCmodel.HrBCModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

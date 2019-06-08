@@ -1,0 +1,19 @@
+//Groovy Scripts for HrBCmodel.bc.views.AnnouncementsView
+
+package HrBCmodel.bc.views
+
+import oracle.jbo.script.annotation.AccessorParameterExpression;
+
+@AccessorParameterExpression(accessorName="BranchView1", name="sectorIdParam")
+def sectorIdParam_BranchView1_BindVariable_BoundParameter()
+{
+SectorId
+}
+
+
+@AccessorParameterExpression(accessorName="DepartmentsView1", name="branchIdParam")
+def branchIdParam_DepartmentsView1_BindVariable_BoundParameter()
+{
+BranchId
+}
+

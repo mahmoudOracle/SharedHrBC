@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmployeesView"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  RowClass="model.shared.extensions.ExtViewRowImpl"
+  ComponentClass="model.shared.extensions.ExtViewObjectImpl"
+  FetchMode="FETCH_AS_NEEDED"
+  PageIterMode="Full">
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefMaritalStatus1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefMaritalStatus"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefMaritalStatus1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefBloodGroups1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefBloodGroups"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefBloodGroups1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefGender1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefGender"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefGender1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefCountries1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefCountries"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefCountries1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefReligions1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefReligions"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefReligions1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefYesNo1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefYesNo"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefYesNo1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="JobsView1"
+    ViewObjectName="HrBCmodel.bc.views.JobsView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="DepartmentsView1"
+    ViewObjectName="HrBCmodel.bc.views.DepartmentsView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefJobCategory1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefJobCategory"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefJobCategory1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefJobLevelType1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefJobLevelType"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefJobLevelType1"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="CarsView1"
+    ViewObjectName="HrBCmodel.bc.views.CarsView"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="SharedStaticLOVAppModule_RefEmploymentStatus1_1"
+    ViewObjectName="HrBCmodel.bc.staticLOV.RefEmploymentStatus"
+    AMUsageName="SharedStaticLOVAppModule"
+    ViewInstanceName="RefEmploymentStatus1"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_MaritalStatus"
+    ListVOName="SharedStaticLOVAppModule_RefMaritalStatus1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="MaritalStatus"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Status"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_BloodGroupId"
+    ListVOName="SharedStaticLOVAppModule_RefBloodGroups1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="BloodGroupId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="BloodGroups"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_GenderId"
+    ListVOName="SharedStaticLOVAppModule_RefGender1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="GenderId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Gender"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Nationality"
+    ListVOName="SharedStaticLOVAppModule_RefCountries1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="Nationality"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Country"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_ReligionId"
+    ListVOName="SharedStaticLOVAppModule_RefReligions1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ReligionId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Religion"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_EmpSmoker"
+    ListVOName="SharedStaticLOVAppModule_RefYesNo1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="EmpSmoker"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Value"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_JobId"
+    ListVOName="JobsView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="JobId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="JobId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="JobTitle"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_DepartmentId"
+    ListVOName="DepartmentsView1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="DepartmentName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_JobCategoryId"
+    ListVOName="SharedStaticLOVAppModule_RefJobCategory1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="JobCategoryId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="JobCategory"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_JobLevelTypeId"
+    ListVOName="SharedStaticLOVAppModule_RefJobLevelType1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="JobLevelTypeId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="LevelType"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_EmploymentStatusId"
+    ListVOName="SharedStaticLOVAppModule_RefEmploymentStatus1_1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="EmploymentStatusId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Id"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="EmploymentStatus"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="Employees"
+    Entity="HrBCmodel.bc.entities.Employees"/>
+  <ViewAttribute
+    Name="EmployeeId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="EmployeeId"
+    EntityUsage="Employees"
+    AliasName="EMPLOYEE_ID"/>
+  <ViewAttribute
+    Name="FirstName"
+    PrecisionRule="true"
+    EntityAttrName="FirstName"
+    EntityUsage="Employees"
+    AliasName="FIRST_NAME"/>
+  <ViewAttribute
+    Name="MiddleName"
+    PrecisionRule="true"
+    EntityAttrName="MiddleName"
+    EntityUsage="Employees"
+    AliasName="MIDDLE_NAME"/>
+  <ViewAttribute
+    Name="LastName"
+    PrecisionRule="true"
+    EntityAttrName="LastName"
+    EntityUsage="Employees"
+    AliasName="LAST_NAME"/>
+  <ViewAttribute
+    Name="DateOfBirth"
+    PrecisionRule="true"
+    EntityAttrName="DateOfBirth"
+    EntityUsage="Employees"
+    AliasName="DATE_OF_BIRTH"/>
+  <ViewAttribute
+    Name="MaritalStatus"
+    PrecisionRule="true"
+    EntityAttrName="MaritalStatus"
+    EntityUsage="Employees"
+    AliasName="MARITAL_STATUS"
+    LOVName="LOV_MaritalStatus">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="BloodGroupId"
+    PrecisionRule="true"
+    EntityAttrName="BloodGroupId"
+    EntityUsage="Employees"
+    AliasName="BLOOD_GROUP_ID"
+    LOVName="LOV_BloodGroupId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="GenderId"
+    PrecisionRule="true"
+    EntityAttrName="GenderId"
+    EntityUsage="Employees"
+    AliasName="GENDER_ID"
+    LOVName="LOV_GenderId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Nationality"
+    PrecisionRule="true"
+    EntityAttrName="Nationality"
+    EntityUsage="Employees"
+    AliasName="NATIONALITY"
+    LOVName="LOV_Nationality">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="ReligionId"
+    PrecisionRule="true"
+    EntityAttrName="ReligionId"
+    EntityUsage="Employees"
+    AliasName="RELIGION_ID"
+    LOVName="LOV_ReligionId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="EmpSmoker"
+    PrecisionRule="true"
+    EntityAttrName="EmpSmoker"
+    EntityUsage="Employees"
+    AliasName="EMP_SMOKER"
+    LOVName="LOV_EmpSmoker">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Mobile"
+    PrecisionRule="true"
+    EntityAttrName="Mobile"
+    EntityUsage="Employees"
+    AliasName="MOBILE"/>
+  <ViewAttribute
+    Name="Phone"
+    PrecisionRule="true"
+    EntityAttrName="Phone"
+    EntityUsage="Employees"
+    AliasName="PHONE"/>
+  <ViewAttribute
+    Name="Email"
+    PrecisionRule="true"
+    EntityAttrName="Email"
+    EntityUsage="Employees"
+    AliasName="EMAIL"/>
+  <ViewAttribute
+    Name="EmergencyPhone"
+    PrecisionRule="true"
+    EntityAttrName="EmergencyPhone"
+    EntityUsage="Employees"
+    AliasName="EMERGENCY_PHONE"/>
+  <ViewAttribute
+    Name="EmploymentStatusId"
+    PrecisionRule="true"
+    EntityAttrName="EmploymentStatusId"
+    EntityUsage="Employees"
+    AliasName="EMPLOYMENT_STATUS_ID"
+    LOVName="LOV_EmploymentStatusId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="HireDate"
+    PrecisionRule="true"
+    EntityAttrName="HireDate"
+    EntityUsage="Employees"
+    AliasName="HIRE_DATE"/>
+  <ViewAttribute
+    Name="JobId"
+    PrecisionRule="true"
+    EntityAttrName="JobId"
+    EntityUsage="Employees"
+    AliasName="JOB_ID"
+    LOVName="LOV_JobId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="Employees"
+    AliasName="DEPARTMENT_ID"
+    LOVName="LOV_DepartmentId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="JobCategoryId"
+    PrecisionRule="true"
+    EntityAttrName="JobCategoryId"
+    EntityUsage="Employees"
+    AliasName="JOB_CATEGORY_ID"
+    LOVName="LOV_JobCategoryId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="JobLevelTypeId"
+    PrecisionRule="true"
+    EntityAttrName="JobLevelTypeId"
+    EntityUsage="Employees"
+    AliasName="JOB_LEVEL_TYPE_ID"
+    LOVName="LOV_JobLevelTypeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="Employees"
+    AliasName="CREATED_BY"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="CreatedOn"
+    PrecisionRule="true"
+    EntityAttrName="CreatedOn"
+    EntityUsage="Employees"
+    AliasName="CREATED_ON"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="ModifiedBy"
+    PrecisionRule="true"
+    EntityAttrName="ModifiedBy"
+    EntityUsage="Employees"
+    AliasName="MODIFIED_BY"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="ModifiedOn"
+    PrecisionRule="true"
+    EntityAttrName="ModifiedOn"
+    EntityUsage="Employees"
+    AliasName="MODIFIED_ON"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="Version"
+    PrecisionRule="true"
+    EntityAttrName="Version"
+    EntityUsage="Employees"
+    AliasName="VERSION"
+    IsUpdateable="false"/>
+  <ViewAttribute
+    Name="JobPayTypeId"
+    PrecisionRule="true"
+    EntityAttrName="JobPayTypeId"
+    EntityUsage="Employees"
+    AliasName="JOB_PAY_TYPE_ID"/>
+  <ViewLinkAccessor
+    Name="DisciplinaryIncidentView"
+    ViewLink="HrBCmodel.bc.viewLinks.DisciplinaryIncidentFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="BranchView"
+    ViewLink="HrBCmodel.bc.viewLinks.BranchFk2EmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="CustomerCompaniesView"
+    ViewLink="HrBCmodel.bc.viewLinks.CustomerCompanyFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DrivingLicenseView"
+    ViewLink="HrBCmodel.bc.viewLinks.DrivingLicenseFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DisciplinaryHistoryView"
+    ViewLink="HrBCmodel.bc.viewLinks.DisciplinaryHistoryFk2Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DisciplinaryHistoryView1"
+    ViewLink="HrBCmodel.bc.viewLinks.DisciplinaryHistoryFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmerfgencyContactPersonsView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmerfgencyContPersoFk1EmpLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DepartmentsView"
+    ViewLink="HrBCmodel.bc.viewLinks.DepartmentFk2EmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ContractsView"
+    ViewLink="HrBCmodel.bc.viewLinks.ContractsFk1EmployeesLink"
+    Type="model.shared.extensions.ExtViewRowImpl"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="DependentsView"
+    ViewLink="HrBCmodel.bc.viewLinks.DependentsFk1EmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeAddressView"
+    ViewLink="HrBCmodel.bc.viewLinks.HomeAddressesFkEmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeAttachmentsView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmpAttachmentsFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeContactHomeCountryView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeConHomeFk1EmplLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeCoursesView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmpCoursesFk2Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeEducationView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeEducationFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeExperiencesView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeExperiencesFk1EmpsLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeLanguagesView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmpLanguagesFk1EmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeSkillsView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeSkillsFk1EmpsLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmployeeTerminationView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeTerminationFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmpProjectsView"
+    ViewLink="HrBCmodel.bc.viewLinks.ProjectAdminFk2Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="JobHistoryView"
+    ViewLink="HrBCmodel.bc.viewLinks.JobHistoryFkEmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="LeaveRequestView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeLeaveTakenFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ManagerLeaveDecisonView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeVacStFk1EmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ManagerLeaveDecisonView1"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeVacStFk2EmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ManagerLeaveDecisonView2"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeVacStFk3EmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ManagerLeaveDecisonView3"
+    ViewLink="HrBCmodel.bc.viewLinks.EmployeeVacStFk4EmployeesLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="NationalIqamaIdView"
+    ViewLink="HrBCmodel.bc.viewLinks.NationalidIqamaFk1EmployeeLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="PassportInfoView"
+    ViewLink="HrBCmodel.bc.viewLinks.PassportInfoFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="ProjectsView"
+    ViewLink="HrBCmodel.bc.viewLinks.ProjectsFk2Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="EmpCarsView"
+    ViewLink="HrBCmodel.bc.viewLinks.EmpCarsFk1Link"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+</ViewObject>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmpLeaveHistoryFk1Assoc"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="LeaveRequest"
+    Cardinality="1"
+    Source="true"
+    Owner="HrBCmodel.bc.entities.LeaveRequest"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="LeaveRequest"/>
+      <Attr Name="_foreignKey" Value="HrBCmodel.bc.entities.LeaveRequest.EmployeeLeaveTakenPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.LeaveRequest.LeaveRequestId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="EmployeeLeaveHistory"
+    Cardinality="-1"
+    Owner="HrBCmodel.bc.entities.EmployeeLeaveHistory">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="EmployeeLeaveHistory"/>
+      <Attr Name="_foreignKey" Value="HrBCmodel.bc.entities.EmployeeLeaveHistory.fk_EmployeeLeaveHistory"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.EmployeeLeaveHistory.LeaveRequestId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

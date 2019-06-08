@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="RefRaisedBy"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="true"
+  RowClass="HrBCmodel.bc.staticLOV.RefRaisedByRowImpl"
+  ComponentClass="HrBCmodel.bc.staticLOV.RefRaisedByImpl"
+  FetchMode="FETCH_AS_NEEDED"
+  PageIterMode="Full">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Coll"/>
+    <Attr Name="_isExpertMode" Value="true"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="HrBCmodel.bc.staticLOV.RefRaisedBy_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewAttribute
+    Name="RaisedById"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="$none$"/>
+  <ViewAttribute
+    Name="RaisedByName"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="255"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    SQLType="VARCHAR"/>
+  <AttrArray Name="KeyAttributes">
+    <Item Value="RaisedById"/>
+  </AttrArray>
+  <StaticList
+    Rows="2"
+    Columns="2"/>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="HrBCmodel.HrBCModelBundle"/>
+  </ResourceBundle>
+</ViewObject>

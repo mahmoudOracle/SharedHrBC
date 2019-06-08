@@ -1,0 +1,12 @@
+//Groovy Scripts for HrBCmodel.bc.views.CarsView
+
+package HrBCmodel.bc.views
+
+import oracle.jbo.script.annotation.AccessorParameterExpression;
+
+@AccessorParameterExpression(accessorName="SharedStaticLOVAppModule_RefCarModel1_1", name="brandIdParam")
+def brandIdParam_SharedStaticLOVAppModule_RefCarModel1_1_BindVariable_BoundParameter()
+{
+BrandId
+}
+

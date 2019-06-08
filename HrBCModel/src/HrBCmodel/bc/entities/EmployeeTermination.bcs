@@ -1,0 +1,12 @@
+//Groovy Scripts for HrBCmodel.bc.entities.EmployeeTermination
+
+package HrBCmodel.bc.entities
+
+import oracle.jbo.script.annotation.ValidatorExpression;
+
+@ValidatorExpression(name="TerminationDateRule0", attributeName="TerminationDate")
+def TerminationDate_TerminationDateRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+

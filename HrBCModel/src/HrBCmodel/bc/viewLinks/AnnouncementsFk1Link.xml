@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="AnnouncementsFk1Link"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  EntityAssociation="HrBCmodel.bc.associations.AnnouncementsFk1Assoc">
+  <ViewLinkDefEnd
+    Name="DepartmentsView"
+    Cardinality="1"
+    Source="true"
+    Owner="HrBCmodel.bc.views.DepartmentsView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="DepartmentsView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.views.DepartmentsView.DepartmentId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="AnnouncementsView"
+    Cardinality="-1"
+    Owner="HrBCmodel.bc.views.AnnouncementsView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="AnnouncementsView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.views.AnnouncementsView.DepartmentId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

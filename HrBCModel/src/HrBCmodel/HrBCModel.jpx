@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="HrBCModel"
+  Version="12.2.1.9.14"
+  SeparateXMLFiles="true"
+  PackageName="HrBCmodel">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../HrBCModel.jpr"/>
+    <Attr Name="_NamedConnection" Value="hr0905"/>
+    <Attr Name="_appModuleNames0" Value="HrBCmodel.bc.am.SharedStaticLOVAppModule"/>
+  </DesignTime>
+  <Containee
+    Name="am"
+    PackageName="HrBCmodel.bc.am"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="associations"
+    PackageName="HrBCmodel.bc.associations"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AS" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="entities"
+    PackageName="HrBCmodel.bc.entities"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="staticLOV"
+    PackageName="HrBCmodel.bc.staticLOV"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="viewLinks"
+    PackageName="HrBCmodel.bc.viewLinks"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VL" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="views"
+    PackageName="HrBCmodel.bc.views"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <AppContainee
+    Name="SharedBC"
+    FullName="model.SharedBC"
+    ObjectType="JboProject">
+    <DesignTime>
+      <Attr Name="_SourceName" Value="adflibSharedLib.jar"/>
+    </DesignTime>
+  </AppContainee>
+  <AppModuleUsage
+    Name="SharedStaticLOVAppModule"
+    FullName="HrBCmodel.bc.am.SharedStaticLOVAppModule"
+    ConfigurationName="HrBCmodel.bc.am.SharedStaticLOVAppModuleShared"
+    SharedScope="2"/>
+</JboProject>

@@ -1,0 +1,12 @@
+//Groovy Scripts for HrBCmodel.bc.entities.Contracts
+
+package HrBCmodel.bc.entities
+
+import oracle.jbo.script.annotation.ValidatorExpression;
+
+@ValidatorExpression(name="StartDateRule0", attributeName="StartDate")
+def StartDate_StartDateRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+

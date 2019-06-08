@@ -1,0 +1,40 @@
+//Groovy Scripts for HrBCmodel.bc.entities.LeaveRequest
+
+package HrBCmodel.bc.entities
+
+import oracle.jbo.script.annotation.ValidatorExpression;
+
+@ValidatorExpression(name="RequestDateRule0", attributeName="RequestDate")
+def RequestDate_RequestDateRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+
+
+@ValidatorExpression(name="LastDateOnJobRule0", attributeName="LastDateOnJob")
+def LastDateOnJob_LastDateOnJobRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+
+
+@ValidatorExpression(name="LeaveFromDateRule0", attributeName="LeaveFromDate")
+def LeaveFromDate_LeaveFromDateRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+
+
+@ValidatorExpression(name="LeaveToDateRule0", attributeName="LeaveToDate")
+def LeaveToDate_LeaveToDateRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+
+
+@ValidatorExpression(name="RejoinDateRule0", attributeName="RejoinDate")
+def RejoinDate_RejoinDateRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+

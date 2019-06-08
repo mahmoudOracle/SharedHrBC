@@ -1,0 +1,12 @@
+//Groovy Scripts for HrBCmodel.bc.entities.DrivingLicense
+
+package HrBCmodel.bc.entities
+
+import oracle.jbo.script.annotation.ValidatorExpression;
+
+@ValidatorExpression(name="IssueDateRule0", attributeName="IssueDate")
+def IssueDate_IssueDateRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+

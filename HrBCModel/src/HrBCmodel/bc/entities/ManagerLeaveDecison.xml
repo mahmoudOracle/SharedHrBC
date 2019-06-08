@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ManagerLeaveDecison"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="MANAGER_LEAVE_DECISON"
+  AliasName="ManagerLeaveDecison"
+  BindingStyle="OracleName"
+  RowClass="model.shared.extensions.ExtEntityImpl"
+  DefClass="model.shared.extensions.ExtEntityDefImpl">
+  <Attribute
+    Name="ManagerLeaveDecisonId"
+    IsNotNull="true"
+    ColumnName="MANAGER_LEAVE_DECISON_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON"
+    PrimaryKey="true">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="CommitSequence"
+          Value="MANAGER_LEAVE_DECISON_SEQ"/>
+        <Property
+          Name="CreateSequence"
+          Value="CREATE_SEQ"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="EmployeeLeaveRequestId"
+    IsNotNull="true"
+    ColumnName="EMPLOYEE_LEAVE_REQUEST_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.EmployeeLeaveRequestId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="DirectManagerId"
+    IsNotNull="true"
+    ColumnName="DIRECT_MANAGER_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.DirectManagerId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="DirectManagerDecision"
+    ColumnName="DIRECT_MANAGER_DECISION"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.DirectManagerDecision_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="DirectManagerComments"
+    Precision="100"
+    ColumnName="DIRECT_MANAGER_COMMENTS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MANAGER_LEAVE_DECISON">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.DirectManagerComments_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="OperationManagerId"
+    IsNotNull="true"
+    ColumnName="OPERATION_MANAGER_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.OperationManagerId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="OperationManagerDecision"
+    ColumnName="OPERATION_MANAGER_DECISION"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.OperationManagerDecision_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="OperationManagerComments"
+    Precision="100"
+    ColumnName="OPERATION_MANAGER_COMMENTS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MANAGER_LEAVE_DECISON">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.OperationManagerComments_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="AdminManagerId"
+    IsNotNull="true"
+    ColumnName="ADMIN_MANAGER_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.AdminManagerId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="AdminManagerDecision"
+    ColumnName="ADMIN_MANAGER_DECISION"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.AdminManagerDecision_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="AdminManagerComments"
+    Precision="100"
+    ColumnName="ADMIN_MANAGER_COMMENTS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MANAGER_LEAVE_DECISON">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.AdminManagerComments_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="GeneralManagerId"
+    IsNotNull="true"
+    ColumnName="GENERAL_MANAGER_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.GeneralManagerId_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="GeneralManagerDecison"
+    ColumnName="GENERAL_MANAGER_DECISON"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.GeneralManagerDecison_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="GeneralManagerComments"
+    Precision="20"
+    ColumnName="GENERAL_MANAGER_COMMENTS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MANAGER_LEAVE_DECISON">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.ManagerLeaveDecison.GeneralManagerComments_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    Precision="20"
+    ColumnName="CREATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MANAGER_LEAVE_DECISON"
+    IsUpdateable="while_insert"
+    HistoryColumn="UserHistory">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedOn"
+    ColumnName="CREATED_ON"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="MANAGER_LEAVE_DECISON"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
+  <Attribute
+    Name="ModifiedBy"
+    Precision="20"
+    ColumnName="MODIFIED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="MANAGER_LEAVE_DECISON"
+    HistoryColumn="UserHistory">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModifiedOn"
+    ColumnName="MODIFIED_ON"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="MANAGER_LEAVE_DECISON"
+    HistoryColumn="DateHistory"/>
+  <Attribute
+    Name="Version"
+    ColumnName="VERSION"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="MANAGER_LEAVE_DECISON"
+    HistoryColumn="VersionHistory"
+    ChangeIndicator="true"/>
+  <AccessorAttribute
+    Name="LeaveRequest"
+    Association="HrBCmodel.bc.associations.EmployeeVacationApproveFk1Assoc"
+    AssociationEnd="HrBCmodel.bc.associations.EmployeeVacationApproveFk1Assoc.LeaveRequest"
+    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeVacationApproveFk1Assoc.ManagerLeaveDecison"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees"
+    Association="HrBCmodel.bc.associations.EmployeeVacStFk1EmployeesAssoc"
+    AssociationEnd="HrBCmodel.bc.associations.EmployeeVacStFk1EmployeesAssoc.Employees"
+    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeVacStFk1EmployeesAssoc.ManagerLeaveDecison"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees1"
+    Association="HrBCmodel.bc.associations.EmployeeVacStFk2EmployeesAssoc"
+    AssociationEnd="HrBCmodel.bc.associations.EmployeeVacStFk2EmployeesAssoc.Employees1"
+    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeVacStFk2EmployeesAssoc.ManagerLeaveDecison1"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees2"
+    Association="HrBCmodel.bc.associations.EmployeeVacStFk3EmployeesAssoc"
+    AssociationEnd="HrBCmodel.bc.associations.EmployeeVacStFk3EmployeesAssoc.Employees2"
+    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeVacStFk3EmployeesAssoc.ManagerLeaveDecison2"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees3"
+    Association="HrBCmodel.bc.associations.EmployeeVacStFk4EmployeesAssoc"
+    AssociationEnd="HrBCmodel.bc.associations.EmployeeVacStFk4EmployeesAssoc.Employees3"
+    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeVacStFk4EmployeesAssoc.ManagerLeaveDecison3"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="EmployeeAnnualLeavePk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="EMPLOYEE_ANNUAL_LEAVE_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.ManagerLeaveDecison.ManagerLeaveDecisonId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeeVacStFk1Employees">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="EMPLOYEES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEE_VAC_ST_FK1_EMPLOYEES"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.ManagerLeaveDecison.DirectManagerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeeVacStFk2Employees">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="EMPLOYEES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEE_VAC_ST_FK2_EMPLOYEES"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.ManagerLeaveDecison.OperationManagerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeeVacStFk3Employees">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="EMPLOYEES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEE_VAC_ST_FK3_EMPLOYEES"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.ManagerLeaveDecison.AdminManagerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeeVacStFk4Employees">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="EMPLOYEES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEE_VAC_ST_FK4_EMPLOYEES"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.ManagerLeaveDecison.GeneralManagerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeeVacationApproveFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="EMPLOYEE_LEAVE_TAKEN_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEE_VACATION_APPROVE_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.ManagerLeaveDecison.EmployeeLeaveRequestId"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="HrBCmodel.HrBCModelBundle"/>
+  </ResourceBundle>
+</Entity>

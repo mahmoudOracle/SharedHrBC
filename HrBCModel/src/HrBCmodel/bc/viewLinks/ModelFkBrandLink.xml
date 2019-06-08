@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ModelFkBrandLink"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="HrBCmodel.bc.viewLinks.ModelFkBrandLink_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="RefBrand"
+    Cardinality="1"
+    Source="true"
+    Owner="HrBCmodel.bc.staticLOV.RefBrand">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="RefBrand"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.staticLOV.RefBrand.Id"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="RefCarModel"
+    Cardinality="-1"
+    Owner="HrBCmodel.bc.staticLOV.RefCarModel">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="RefCarModel"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.staticLOV.RefCarModel.BrandId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="HrBCmodel.HrBCModelBundle"/>
+  </ResourceBundle>
+</ViewLink>

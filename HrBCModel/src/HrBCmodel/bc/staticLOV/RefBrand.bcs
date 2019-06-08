@@ -1,0 +1,12 @@
+//Groovy Scripts for HrBCmodel.bc.staticLOV.RefBrand
+
+package HrBCmodel.bc.staticLOV
+
+import oracle.jbo.script.annotation.AccessorParameterExpression;
+
+@AccessorParameterExpression(accessorName="RefCarModel1", name="brandIdParam")
+def brandIdParam_RefCarModel1_BindVariable_BoundParameter()
+{
+Id
+}
+

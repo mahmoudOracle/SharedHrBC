@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DisciplinaryHistory"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="DISCIPLINARY_HISTORY"
+  AliasName="DisciplinaryHistory"
+  BindingStyle="OracleName"
+  RowClass="model.shared.extensions.ExtEntityImpl"
+  DefClass="model.shared.extensions.ExtEntityDefImpl">
+  <Attribute
+    Name="DisciplinaryHistoryId"
+    IsNotNull="true"
+    ColumnName="DISCIPLINARY_HISTORY_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DISCIPLINARY_HISTORY"
+    PrimaryKey="true">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="CreateSequence"
+          Value="CREATE_SEQ"/>
+        <Property
+          Name="CommitSequence"
+          Value="DISCIPLINARY_HISTORY_SEQ"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="DisciplinaryIncidentId"
+    IsNotNull="true"
+    ColumnName="DISCIPLINARY_INCIDENT_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DISCIPLINARY_HISTORY">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.DisciplinaryHistory.DisciplinaryIncidentId_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="EmployeeMakeViolation"
+    IsNotNull="true"
+    ColumnName="EMPLOYEE_MAKE_VIOLATION"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DISCIPLINARY_HISTORY">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.DisciplinaryHistory.EmployeeMakeViolation_LABEL"/>
+        <TOOLTIP
+          ResId="HrBCmodel.bc.entities.DisciplinaryHistory.EmployeeMakeViolation_TOOLTIP"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="HandledByEmpId"
+    IsNotNull="true"
+    ColumnName="HANDLED_BY_EMP_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DISCIPLINARY_HISTORY">
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.DisciplinaryHistory.HandledByEmpId_LABEL"/>
+        <TOOLTIP
+          ResId="HrBCmodel.bc.entities.DisciplinaryHistory.HandledByEmpId_TOOLTIP"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    Precision="20"
+    ColumnName="CREATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DISCIPLINARY_HISTORY"
+    IsUpdateable="while_insert"
+    HistoryColumn="UserHistory">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedOn"
+    ColumnName="CREATED_ON"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="DISCIPLINARY_HISTORY"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
+  <Attribute
+    Name="ModifiedBy"
+    Precision="20"
+    ColumnName="MODIFIED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DISCIPLINARY_HISTORY"
+    HistoryColumn="UserHistory">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModifiedOn"
+    ColumnName="MODIFIED_ON"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="DISCIPLINARY_HISTORY"
+    HistoryColumn="DateHistory"/>
+  <Attribute
+    Name="Version"
+    ColumnName="VERSION"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DISCIPLINARY_HISTORY"
+    HistoryColumn="VersionHistory"
+    ChangeIndicator="true"/>
+  <AccessorAttribute
+    Name="DisciplinaryIncident"
+    Association="HrBCmodel.bc.associations.DisciplinaryHistoryFk3Assoc"
+    AssociationEnd="HrBCmodel.bc.associations.DisciplinaryHistoryFk3Assoc.DisciplinaryIncident"
+    AssociationOtherEnd="HrBCmodel.bc.associations.DisciplinaryHistoryFk3Assoc.DisciplinaryHistory"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees"
+    Association="HrBCmodel.bc.associations.DisciplinaryHistoryFk2Assoc"
+    AssociationEnd="HrBCmodel.bc.associations.DisciplinaryHistoryFk2Assoc.Employees"
+    AssociationOtherEnd="HrBCmodel.bc.associations.DisciplinaryHistoryFk2Assoc.DisciplinaryHistory"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="Employees1"
+    Association="HrBCmodel.bc.associations.DisciplinaryHistoryFk1Assoc"
+    AssociationEnd="HrBCmodel.bc.associations.DisciplinaryHistoryFk1Assoc.Employees1"
+    AssociationOtherEnd="HrBCmodel.bc.associations.DisciplinaryHistoryFk1Assoc.DisciplinaryHistory1"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="DisciplinaryHistoryPk"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="DISCIPLINARY_HISTORY_PK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.DisciplinaryHistory.DisciplinaryHistoryId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DisciplinaryHistoryFk1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="EMPLOYEES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="DISCIPLINARY_HISTORY_FK1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.DisciplinaryHistory.EmployeeMakeViolation"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DisciplinaryHistoryFk2">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="EMPLOYEES_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="DISCIPLINARY_HISTORY_FK2"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.DisciplinaryHistory.HandledByEmpId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="DisciplinaryHistoryFk3">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="DISCIPLINARY_INCIDENT_PK"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="DISCIPLINARY_HISTORY_FK3"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.DisciplinaryHistory.DisciplinaryIncidentId"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="HrBCmodel.HrBCModelBundle"/>
+  </ResourceBundle>
+</Entity>
