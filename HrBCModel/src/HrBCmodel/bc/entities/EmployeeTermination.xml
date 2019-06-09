@@ -49,22 +49,6 @@
     </Properties>
   </Attribute>
   <Attribute
-    Name="ContractId"
-    IsUnique="true"
-    IsNotNull="true"
-    ColumnName="CONTRACT_ID"
-    SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
-    ColumnType="NUMBER"
-    TableName="EMPLOYEE_TERMINATION">
-    <Properties>
-      <SchemaBasedProperties>
-        <LABEL
-          ResId="HrBCmodel.bc.entities.EmployeeTermination.ContractId_LABEL"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </Attribute>
-  <Attribute
     Name="TerminationReason"
     IsNotNull="true"
     ColumnName="TERMINATION_REASON"
@@ -208,13 +192,6 @@
     AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeTerminationFk1Assoc.EmployeeTermination"
     Type="model.shared.extensions.ExtEntityImpl"
     IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="Contracts"
-    Association="HrBCmodel.bc.associations.EmployeeTerminationFk2Assoc"
-    AssociationEnd="HrBCmodel.bc.associations.EmployeeTerminationFk2Assoc.Contracts"
-    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeTerminationFk2Assoc.EmployeeTermination"
-    Type="model.shared.extensions.ExtEntityImpl"
-    IsUpdateable="true"/>
   <Key
     Name="EmployeeTerminationPk"
     PrimaryKey="true">
@@ -231,9 +208,7 @@
       <Attr Name="_isUnique" Value="true"/>
       <Attr Name="_DBObjectName" Value="EMPLOYEE_TERMINATION_UK1"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="HrBCmodel.bc.entities.EmployeeTermination.ContractId"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <Key
     Name="EmployeeTerminationFk1">
@@ -253,9 +228,7 @@
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="EMPLOYEE_TERMINATION_FK2"/>
     </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="HrBCmodel.bc.entities.EmployeeTermination.ContractId"/>
-    </AttrArray>
+    <AttrArray Name="Attributes"/>
   </Key>
   <ResourceBundle>
     <PropertiesBundle

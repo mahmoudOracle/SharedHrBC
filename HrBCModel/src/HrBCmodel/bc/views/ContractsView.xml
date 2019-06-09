@@ -178,11 +178,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <ViewLinkAccessor
-    Name="EmployeeTerminationView"
-    ViewLink="HrBCmodel.bc.viewLinks.EmployeeTerminationFk2Link"
-    Type="model.shared.extensions.ExtViewRowImpl"
-    IsUpdateable="false"/>
-  <ViewLinkAccessor
     Name="EmployeesView12"
     ViewLink="HrBCmodel.bc.viewLinks.ContractsFk1EmployeesLink"
     Type="model.shared.extensions.ExtViewRowImpl"

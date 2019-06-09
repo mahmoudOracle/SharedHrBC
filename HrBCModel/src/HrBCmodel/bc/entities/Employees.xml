@@ -570,13 +570,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="EmployeeTermination"
-    Association="HrBCmodel.bc.associations.EmployeeTerminationFk1Assoc"
-    AssociationEnd="HrBCmodel.bc.associations.EmployeeTerminationFk1Assoc.EmployeeTermination"
-    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeTerminationFk1Assoc.Employees"
-    Type="oracle.jbo.RowIterator"
-    IsUpdateable="false"/>
-  <AccessorAttribute
     Name="EmpProjects"
     Association="HrBCmodel.bc.associations.ProjectAdminFk2Assoc"
     AssociationEnd="HrBCmodel.bc.associations.ProjectAdminFk2Assoc.EmpProjects"
@@ -665,6 +658,13 @@
     Association="HrBCmodel.bc.associations.PassportInfoFk1Assoc"
     AssociationEnd="HrBCmodel.bc.associations.PassportInfoFk1Assoc.PassportInfo"
     AssociationOtherEnd="HrBCmodel.bc.associations.PassportInfoFk1Assoc.Employees"
+    Type="model.shared.extensions.ExtEntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeeTermination"
+    Association="HrBCmodel.bc.associations.EmployeeTerminationFk1Assoc"
+    AssociationEnd="HrBCmodel.bc.associations.EmployeeTerminationFk1Assoc.EmployeeTermination"
+    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeTerminationFk1Assoc.Employees"
     Type="model.shared.extensions.ExtEntityImpl"
     IsUpdateable="true"/>
   <Key

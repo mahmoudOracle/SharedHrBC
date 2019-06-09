@@ -223,13 +223,6 @@
     AssociationOtherEnd="HrBCmodel.bc.associations.ContractsFk1EmployeesAssoc.Contracts"
     Type="model.shared.extensions.ExtEntityImpl"
     IsUpdateable="true"/>
-  <AccessorAttribute
-    Name="EmployeeTermination"
-    Association="HrBCmodel.bc.associations.EmployeeTerminationFk2Assoc"
-    AssociationEnd="HrBCmodel.bc.associations.EmployeeTerminationFk2Assoc.EmployeeTermination"
-    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeeTerminationFk2Assoc.Contracts"
-    Type="model.shared.extensions.ExtEntityImpl"
-    IsUpdateable="true"/>
   <Key
     Name="ContractsPk"
     PrimaryKey="true">

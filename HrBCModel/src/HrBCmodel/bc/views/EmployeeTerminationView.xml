@@ -51,23 +51,6 @@
     <DisplayCriteria/>
   </ListBinding>
   <ListBinding
-    Name="LOV_ContractId"
-    ListVOName="ContractsView1"
-    NullValueFlag="none"
-    MRUCount="0">
-    <AttrArray Name="AttrNames">
-      <Item Value="ContractId"/>
-    </AttrArray>
-    <AttrArray Name="AttrExpressions"/>
-    <AttrArray Name="ListAttrNames">
-      <Item Value="ContractId"/>
-    </AttrArray>
-    <AttrArray Name="ListDisplayAttrNames">
-      <Item Value="EmployeeId"/>
-    </AttrArray>
-    <DisplayCriteria/>
-  </ListBinding>
-  <ListBinding
     Name="LOV_TerminationReason"
     ListVOName="SharedStaticLOVAppModule_RefTerminationReasons1_1"
     NullValueFlag="none"
@@ -106,22 +89,6 @@
       <SchemaBasedProperties>
         <CONTROLTYPE
           Value="input_text_lov"/>
-      </SchemaBasedProperties>
-    </Properties>
-  </ViewAttribute>
-  <ViewAttribute
-    Name="ContractId"
-    IsUnique="true"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ContractId"
-    EntityUsage="EmployeeTermination"
-    AliasName="CONTRACT_ID"
-    LOVName="LOV_ContractId">
-    <Properties>
-      <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="choice"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

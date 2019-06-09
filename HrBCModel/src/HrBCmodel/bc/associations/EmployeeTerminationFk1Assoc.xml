@@ -27,7 +27,7 @@
   </AssociationEnd>
   <AssociationEnd
     Name="EmployeeTermination"
-    Cardinality="-1"
+    Cardinality="1"
     Owner="HrBCmodel.bc.entities.EmployeeTermination">
     <DesignTime>
       <Attr Name="_isUpdateable" Value="true"/>
