@@ -96,21 +96,12 @@
     Name="RefBrand1"
     ViewObjectName="HrBCmodel.bc.staticLOV.RefBrand"/>
   <ViewUsage
-    Name="CompaniesContactPersonsView1"
-    ViewObjectName="HrBCmodel.bc.views.CompaniesContactPersonsView"/>
-  <ViewUsage
-    Name="ContractsView1"
-    ViewObjectName="HrBCmodel.bc.views.ContractsView"/>
-  <ViewUsage
     Name="RefRaisedBy1"
     ViewObjectName="HrBCmodel.bc.staticLOV.RefRaisedBy"/>
   <ViewUsage
     Name="RefDrivingLicenseType1"
     ViewObjectName="HrBCmodel.bc.staticLOV.RefDrivingLicenseType"/>
   <ViewUsage
-    Name="EmpCarsView1"
-    ViewObjectName="HrBCmodel.bc.views.EmpCarsView"/>
-  <ViewUsage
-    Name="EmployeeLeaveHistoryView1"
-    ViewObjectName="HrBCmodel.bc.views.EmployeeLeaveHistoryView"/>
+    Name="EmployeesView1"
+    ViewObjectName="HrBCmodel.bc.views.EmployeesView"/>
 </AppModule>

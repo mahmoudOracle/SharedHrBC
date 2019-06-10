@@ -73,6 +73,14 @@
    <value n="jbo.NoAttrEnumClasses" v="true"/>
    <value n="JboProject" v="true"/>
    <hash n="oracle.adfdtinternal.model.ide.settings.ADFMSettings">
+      <hash n="adfmContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="adfmsrc/"/>
+         </list>
+      </hash>
       <value n="hasDataControls" v="true"/>
    </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
@@ -220,6 +228,10 @@
             <value n="id" v="ADF Library"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="AdflibSharedLib.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <hash n="internalDefinitions">
          <list n="libraryDefinitions">
@@ -230,6 +242,15 @@
                <value n="deployedByDefault" v="true"/>
                <value n="description" v="ADF Library"/>
                <value n="id" v="ADF Library"/>
+            </hash>
+            <hash>
+               <list n="classPath">
+                  <url path="../../../FinalReUsableJars/deploy/adflibSharedLib.jar" jar-entry=""/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="AdflibSharedLib.jar"/>
+               <value n="id" v="AdflibSharedLib.jar"/>
+               <value n="locked" v="true"/>
             </hash>
          </list>
       </hash>
@@ -274,9 +295,16 @@
             <value n="id" v="ADF Library"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="AdflibSharedLib.jar"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>
+   </hash>
+   <hash n="ResourceBundleOptions">
+      <list n="RegisteredResourceBundles"/>
    </hash>
 </jpr:project>

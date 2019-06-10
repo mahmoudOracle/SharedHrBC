@@ -8,14 +8,12 @@
   InheritPersonalization="merge"
   BindingStyle="OracleName"
   CustomQuery="true"
-  RowClass="HrBCmodel.bc.staticLOV.RefRaisedByRowImpl"
-  ComponentClass="HrBCmodel.bc.staticLOV.RefRaisedByImpl"
+  RowClass="model.shared.extensions.ExtViewRowImpl"
+  ComponentClass="model.shared.extensions.ExtViewObjectImpl"
   FetchMode="FETCH_AS_NEEDED"
   PageIterMode="Full">
   <DesignTime>
-    <Attr Name="_codeGenFlag2" Value="Coll"/>
     <Attr Name="_isExpertMode" Value="true"/>
-    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <Properties>
     <SchemaBasedProperties>
@@ -29,7 +27,8 @@
     IsPersistent="false"
     PrecisionRule="true"
     Type="oracle.jbo.domain.Number"
-    ColumnType="$none$"/>
+    ColumnType="$none$"
+    SQLType="NUMERIC"/>
   <ViewAttribute
     Name="RaisedByName"
     IsUpdateable="false"
