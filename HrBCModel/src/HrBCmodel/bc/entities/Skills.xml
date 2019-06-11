@@ -48,6 +48,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Skills.SkillName_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>

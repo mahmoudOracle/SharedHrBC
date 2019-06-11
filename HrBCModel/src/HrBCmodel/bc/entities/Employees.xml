@@ -500,13 +500,6 @@
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
   <AccessorAttribute
-    Name="Countries"
-    Association="HrBCmodel.bc.associations.EmployeesFk1CountryAssoc"
-    AssociationEnd="HrBCmodel.bc.associations.EmployeesFk1CountryAssoc.Countries"
-    AssociationOtherEnd="HrBCmodel.bc.associations.EmployeesFk1CountryAssoc.Employees"
-    Type="model.shared.extensions.ExtEntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="Departments1"
     Association="HrBCmodel.bc.associations.EmployeesFk6Assoc"
     AssociationEnd="HrBCmodel.bc.associations.EmployeesFk6Assoc.Departments1"
