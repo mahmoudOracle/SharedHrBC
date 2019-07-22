@@ -31,6 +31,10 @@
           Name="CreateSequence"
           Value="CREATE_SEQ"/>
       </CustomProperties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+      </SchemaBasedProperties>
     </Properties>
   </Attribute>
   <Attribute
@@ -40,7 +44,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -80,7 +85,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
@@ -99,15 +105,18 @@
     SQLType="DATE"
     Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Dependents.Dob_LABEL"/>
-        <FMT_FORMAT
-          ResId="HrBCmodel.bc.entities.Employees.DateOfBirth_FMT_FORMAT"/>
         <FMT_FORMATTER
           ResId="HrBCmodel.bc.entities.Employees.DateOfBirth_FMT_FORMATTER"/>
+        <FMT_FORMAT
+          ResId="HrBCmodel.bc.entities.Employees.DateOfBirth_FMT_FORMAT"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
     <validation:CompareValidationBean
@@ -129,11 +138,14 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Employees.MaritalStatus_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -148,6 +160,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Employees.BloodGroupId_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -157,11 +171,14 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Employees.GenderId_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -171,11 +188,14 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Customers.Nationalty_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -185,11 +205,14 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Employees.ReligionId_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -204,6 +227,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Employees.EmpSmoker_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -243,13 +268,15 @@
     Name="Email"
     ColumnName="EMAIL"
     SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
+    Type="java.lang.String"
     ColumnType="NUMBER"
     TableName="EMPLOYEES">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.CompaniesContactPersons.Email_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
       </SchemaBasedProperties>
     </Properties>
     <validation:RegExpValidationBean
@@ -281,11 +308,14 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Employees.EmploymentStatusId_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -295,7 +325,11 @@
     SQLType="DATE"
     Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      CodeSourceName="EmployeesRow"/>
     <Properties>
       <SchemaBasedProperties>
         <LABEL
@@ -304,6 +338,8 @@
           ResId="HrBCmodel.bc.entities.Employees.HireDate_FMT_FORMAT"/>
         <FMT_FORMATTER
           ResId="HrBCmodel.bc.entities.Employees.HireDate_FMT_FORMATTER"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -313,11 +349,14 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Employees.JobId_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -327,11 +366,14 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="EMPLOYEES">
+    TableName="EMPLOYEES"
+    IsNotNull="true">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.Announcements.DepartmentId_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -380,6 +422,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="CreatedOn"
@@ -389,7 +437,14 @@
     ColumnType="DATE"
     TableName="EMPLOYEES"
     HistoryColumn="DateHistory"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="ModifiedBy"
     Precision="20"
@@ -402,6 +457,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="ModifiedOn"
@@ -410,7 +471,14 @@
     Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
     TableName="EMPLOYEES"
-    HistoryColumn="DateHistory"/>
+    HistoryColumn="DateHistory">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="20"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Attribute>
   <Attribute
     Name="Version"
     ColumnName="VERSION"
@@ -419,18 +487,9 @@
     ColumnType="NUMBER"
     TableName="EMPLOYEES"
     HistoryColumn="VersionHistory"
-    ChangeIndicator="true"/>
-  <Attribute
-    Name="JobPayTypeId"
-    ColumnName="JOB_PAY_TYPE_ID"
-    SQLType="NUMERIC"
-    Type="oracle.jbo.domain.Number"
-    ColumnType="NUMBER"
-    TableName="EMPLOYEES">
+    ChangeIndicator="true">
     <Properties>
       <SchemaBasedProperties>
-        <LABEL
-          ResId="HrBCmodel.bc.entities.Employees.JobPayTypeId_LABEL"/>
         <DISPLAYWIDTH
           Value="20"/>
       </SchemaBasedProperties>
@@ -661,6 +720,126 @@
     Type="model.shared.extensions.ExtEntityImpl"
     IsUpdateable="true"/>
   <Key
+    Name="EmployeesDateOfBirthCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DATE_OF_BIRTH" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_DATE_OF_BIRTH_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.DateOfBirth"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesDepartmentIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"DEPARTMENT_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_DEPARTMENT_ID_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.DepartmentId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesEmploymentStatusIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"EMPLOYMENT_STATUS_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_EMPLOYMENT_STATUS_ID"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.EmploymentStatusId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesFirstNameCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"FIRST_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_FIRST_NAME_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.FirstName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesGenderIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"GENDER_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_GENDER_ID_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.GenderId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesHireDateCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"HIRE_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_HIRE_DATE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.HireDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesJobIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"JOB_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_JOB_ID_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.JobId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesLastNameCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"LAST_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_LAST_NAME_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.LastName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesMaritalStatusCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"MARITAL_STATUS" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_MARITAL_STATUS_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.MaritalStatus"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeesNationalityCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"NATIONALITY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_NATIONALITY_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.Employees.Nationality"/>
+    </AttrArray>
+  </Key>
+  <Key
     Name="EmployeesPk"
     PrimaryKey="true">
     <DesignTime>
@@ -671,14 +850,15 @@
     </AttrArray>
   </Key>
   <Key
-    Name="EmployeesFk1Country">
+    Name="EmployeesReligionIdCheck">
     <DesignTime>
-      <Attr Name="_referencedKey" Value="COUNTRIES_PK"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="EMPLOYEES_FK1_COUNTRY"/>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"RELIGION_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEES_RELIGION_ID_CHECK"/>
     </DesignTime>
     <AttrArray Name="Attributes">
-      <Item Value="HrBCmodel.bc.entities.Employees.Nationality"/>
+      <Item Value="HrBCmodel.bc.entities.Employees.ReligionId"/>
     </AttrArray>
   </Key>
   <Key
@@ -702,15 +882,6 @@
     <AttrArray Name="Attributes">
       <Item Value="HrBCmodel.bc.entities.Employees.JobId"/>
     </AttrArray>
-  </Key>
-  <Key
-    Name="EmployeesFk8">
-    <DesignTime>
-      <Attr Name="_referencedKey" Value="CARS_PK"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="EMPLOYEES_FK8"/>
-    </DesignTime>
-    <AttrArray Name="Attributes"/>
   </Key>
   <ResourceBundle>
     <PropertiesBundle

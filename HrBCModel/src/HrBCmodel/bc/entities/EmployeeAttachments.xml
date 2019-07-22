@@ -83,6 +83,13 @@
     </Properties>
   </Attribute>
   <Attribute
+    Name="AttachmentExtension"
+    ColumnName="ATTACHMENT_EXTENSION"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="EMPLOYEE_ATTACHMENTS"/>
+  <Attribute
     Name="CreatedBy"
     Precision="20"
     ColumnName="CREATED_BY"

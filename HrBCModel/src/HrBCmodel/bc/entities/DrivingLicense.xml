@@ -47,7 +47,7 @@
     Precision="20"
     ColumnName="DRIVING_LICENSE_TYPE"
     SQLType="VARCHAR"
-    Type="java.lang.String"
+    Type="oracle.jbo.domain.Number"
     ColumnType="VARCHAR2"
     TableName="DRIVING_LICENSE">
     <DesignTime>

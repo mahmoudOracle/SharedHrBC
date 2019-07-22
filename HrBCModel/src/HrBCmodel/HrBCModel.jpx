@@ -68,9 +68,4 @@
       <Attr Name="_SourceName" Value="adflibSharedLib.jar"/>
     </DesignTime>
   </AppContainee>
-  <AppModuleUsage
-    Name="SharedStaticLOVAppModule"
-    FullName="HrBCmodel.bc.am.SharedStaticLOVAppModule"
-    ConfigurationName="HrBCmodel.bc.am.SharedStaticLOVAppModuleShared"
-    SharedScope="2"/>
 </JboProject>

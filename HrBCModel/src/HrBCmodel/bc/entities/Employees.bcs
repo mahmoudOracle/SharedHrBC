@@ -3,9 +3,17 @@
 package HrBCmodel.bc.entities
 
 import oracle.jbo.script.annotation.ValidatorExpression;
+import oracle.jbo.script.annotation.TransientValueExpression;
 
 @ValidatorExpression(name="DateOfBirthRule0", attributeName="DateOfBirth")
 def DateOfBirth_DateOfBirthRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+
+
+@TransientValueExpression(attributeName="HireDate")
+def HireDate_ExpressionScript_Expression()
 {
 adf.currentDate
 }

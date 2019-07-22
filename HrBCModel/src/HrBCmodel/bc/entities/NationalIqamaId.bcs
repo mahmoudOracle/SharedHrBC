@@ -1,0 +1,26 @@
+//Groovy Scripts for HrBCmodel.bc.entities.NationalIqamaId
+
+package HrBCmodel.bc.entities
+
+import oracle.jbo.script.annotation.MessageParameterExpression;
+import oracle.jbo.script.annotation.ValidatorExpression;
+
+@MessageParameterExpression(validatorName="IssueDateRule0", name="ResExpressions_1", attributeName="IssueDate")
+def IssueDate_IssueDateRule0_ResExpressions_1_MessageParameterValues()
+{
+newValue
+}
+
+@ValidatorExpression(name="IssueDateRule0", attributeName="IssueDate")
+def IssueDate_IssueDateRule0_ValidationRuleScript_ValidationRule()
+{
+adf.currentDate
+}
+
+
+@MessageParameterExpression(validatorName="ExpirationDateRule0", name="ResExpressions_1", attributeName="ExpirationDate")
+def ExpirationDate_ExpirationDateRule0_ResExpressions_1_MessageParameterValues()
+{
+newValue
+}
+

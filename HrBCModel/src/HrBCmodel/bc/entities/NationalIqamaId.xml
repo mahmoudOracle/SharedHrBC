@@ -11,7 +11,8 @@
   AliasName="NationalIqamaId"
   BindingStyle="OracleName"
   RowClass="model.shared.extensions.ExtEntityImpl"
-  DefClass="model.shared.extensions.ExtEntityDefImpl">
+  DefClass="model.shared.extensions.ExtEntityDefImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="NationalidIqamaInfo"
     IsNotNull="true"
@@ -80,6 +81,23 @@
           ResId="HrBCmodel.bc.entities.NationalIqamaId.IssueDate_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="IssueDateRule0"
+      ResId="HrBCmodel.bc.entities.NationalIqamaId.IssueDate_Rule_0"
+      OnAttribute="IssueDate"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="LESSTHAN">
+      <validation:ResExpressions
+        Name="IssueDateRule0_ResExprList">
+        <validation:Expression
+          Name="1"
+          CodeSourceName="NationalIqamaIdRow"/>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        Name="ValidationRuleScript"
+        CodeSourceName="NationalIqamaIdRow"/>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="ExpirationDate"
@@ -99,6 +117,22 @@
           ResId="HrBCmodel.bc.entities.NationalIqamaId.ExpirationDate_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="ExpirationDateRule0"
+      ResId="HrBCmodel.bc.entities.NationalIqamaId.ExpirationDate_Rule_0"
+      OnAttribute="ExpirationDate"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="GREATERTHAN">
+      <validation:ResExpressions
+        Name="ExpirationDateRule0_ResExprList">
+        <validation:Expression
+          Name="1"
+          CodeSourceName="NationalIqamaIdRow"/>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="IssuePlace"
@@ -115,6 +149,10 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.NationalIqamaId.IssuePlace_LABEL"/>
+        <DISPLAYWIDTH
+          Value="30"/>
+        <DISPLAYHEIGHT
+          Value="2"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
