@@ -11,7 +11,8 @@
   AliasName="EmployeeContactHomeCountry"
   BindingStyle="OracleName"
   RowClass="model.shared.extensions.ExtEntityImpl"
-  DefClass="model.shared.extensions.ExtEntityDefImpl">
+  DefClass="model.shared.extensions.ExtEntityDefImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="ContactHomeId"
     IsNotNull="true"

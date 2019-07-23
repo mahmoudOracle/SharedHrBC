@@ -11,7 +11,8 @@
   AliasName="EmerfgencyContactPersons"
   BindingStyle="OracleName"
   RowClass="model.shared.extensions.ExtEntityImpl"
-  DefClass="model.shared.extensions.ExtEntityDefImpl">
+  DefClass="model.shared.extensions.ExtEntityDefImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="EmergencyContactId"
     IsNotNull="true"
@@ -142,6 +143,12 @@
           Value="20"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RegExpValidationBean
+      Name="MobileNoRule0"
+      ResId="HrBCmodel.bc.entities.EmerfgencyContactPersons.MobileNo_Rule_0"
+      OnAttribute="MobileNo"
+      Pattern="(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="PhoneNo"

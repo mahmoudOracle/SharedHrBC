@@ -247,6 +247,12 @@
           Value="20"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RegExpValidationBean
+      Name="MobileRule0"
+      ResId="HrBCmodel.bc.entities.Employees.Mobile_Rule_0"
+      OnAttribute="Mobile"
+      Pattern="(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})"
+      Inverse="false"/>
   </Attribute>
   <Attribute
     Name="Phone"
