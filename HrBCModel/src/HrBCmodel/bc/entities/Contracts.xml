@@ -73,7 +73,13 @@
       OnAttribute="StartDate"
       OperandType="EXPR"
       Inverse="false"
-      CompareType="GREATERTHANEQUALTO">
+      CompareType="LESSTHANEQUALTO">
+      <validation:ResExpressions
+        Name="StartDateRule0_ResExprList">
+        <validation:Expression
+          trustMode="untrusted"
+          Name="1"><![CDATA[newValue]]></validation:Expression>
+      </validation:ResExpressions>
       <validation:TransientExpression
         Name="ValidationRuleScript"
         trustMode="untrusted"
@@ -101,11 +107,20 @@
     <validation:CompareValidationBean
       Name="EndDateRule0"
       OnAttribute="EndDate"
-      OperandType="JBO"
+      OperandType="EXPR"
       Inverse="false"
       CompareType="GREATERTHAN"
-      CompareValue="HrBCmodel.bc.views.ContractsView.StartDate"
-      ResId="HrBCmodel.bc.entities.Contracts.EndDate_Rule_0"/>
+      ResId="HrBCmodel.bc.entities.Contracts.EndDate_Rule_0">
+      <validation:ResExpressions
+        Name="EndDateRule0_ResExprList">
+        <validation:Expression
+          trustMode="untrusted"
+          Name="1"><![CDATA[newValue]]></validation:Expression>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="BasicSalary"

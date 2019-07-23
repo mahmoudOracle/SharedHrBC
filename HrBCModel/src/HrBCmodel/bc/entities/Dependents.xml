@@ -11,7 +11,8 @@
   AliasName="Dependents"
   BindingStyle="OracleName"
   RowClass="model.shared.extensions.ExtEntityImpl"
-  DefClass="model.shared.extensions.ExtEntityDefImpl">
+  DefClass="model.shared.extensions.ExtEntityDefImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="DependentId"
     IsNotNull="true"
@@ -144,6 +145,24 @@
           ResId="HrBCmodel.bc.entities.Dependents.Dob_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="DobRule0"
+      ResId="HrBCmodel.bc.entities.Dependents.Dob_Rule_0"
+      OnAttribute="Dob"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="LESSTHAN">
+      <validation:ResExpressions
+        Name="DobRule0_ResExprList">
+        <validation:Expression
+          Name="1"
+          trustMode="untrusted"
+          CodeSourceName="DependentsRow"/>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="RelationId"

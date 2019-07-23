@@ -76,11 +76,17 @@
       OnAttribute="IssueDate"
       OperandType="EXPR"
       Inverse="false"
-      CompareType="LESSTHANEQUALTO">
+      CompareType="LESSTHAN">
+      <validation:ResExpressions
+        Name="IssueDateRule0_ResExprList">
+        <validation:Expression
+          Name="1"
+          trustMode="untrusted"
+          CodeSourceName="DrivingLicenseRow"/>
+      </validation:ResExpressions>
       <validation:TransientExpression
-        Name="ValidationRuleScript"
         trustMode="untrusted"
-        CodeSourceName="DrivingLicenseRow"/>
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
     </validation:CompareValidationBean>
   </Attribute>
   <Attribute
@@ -103,10 +109,20 @@
       Name="ExpirationDateRule0"
       ResId="HrBCmodel.bc.entities.DrivingLicense.ExpirationDate_Rule_0"
       OnAttribute="ExpirationDate"
-      OperandType="JBO"
+      OperandType="EXPR"
       Inverse="false"
-      CompareType="GREATERTHAN"
-      CompareValue="HrBCmodel.bc.views.DrivingLicenseView.IssueDate"/>
+      CompareType="GREATERTHAN">
+      <validation:ResExpressions
+        Name="ExpirationDateRule0_ResExprList">
+        <validation:Expression
+          Name="1"
+          trustMode="untrusted"
+          CodeSourceName="DrivingLicenseRow"/>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="CreatedBy"

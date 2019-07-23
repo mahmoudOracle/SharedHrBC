@@ -11,7 +11,8 @@
   AliasName="PassportInfo"
   BindingStyle="OracleName"
   RowClass="model.shared.extensions.ExtEntityImpl"
-  DefClass="model.shared.extensions.ExtEntityDefImpl">
+  DefClass="model.shared.extensions.ExtEntityDefImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="PassportId"
     IsNotNull="true"
@@ -63,6 +64,8 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.PassportInfo.PassportNumber_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -84,6 +87,24 @@
           ResId="HrBCmodel.bc.entities.PassportInfo.IssueDate_FMT_FORMATTER"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="IssueDateRule0"
+      ResId="HrBCmodel.bc.entities.PassportInfo.IssueDate_Rule_0"
+      OnAttribute="IssueDate"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="LESSTHAN">
+      <validation:ResExpressions
+        Name="IssueDateRule0_ResExprList">
+        <validation:Expression
+          Name="1"
+          trustMode="untrusted"
+          CodeSourceName="PassportInfoRow"/>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="ExpirationDate"
@@ -99,6 +120,24 @@
           ResId="HrBCmodel.bc.entities.NationalIqamaId.ExpirationDate_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="ExpirationDateRule0"
+      ResId="HrBCmodel.bc.entities.PassportInfo.ExpirationDate_Rule_0"
+      OnAttribute="ExpirationDate"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="GREATERTHAN">
+      <validation:ResExpressions
+        Name="ExpirationDateRule0_ResExprList">
+        <validation:Expression
+          Name="1"
+          trustMode="untrusted"
+          CodeSourceName="PassportInfoRow"/>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="IssuingAuthority"
@@ -107,7 +146,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="PASSPORT_INFO">
+    TableName="PASSPORT_INFO"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -115,6 +155,10 @@
       <SchemaBasedProperties>
         <LABEL
           ResId="HrBCmodel.bc.entities.PassportInfo.IssuingAuthority_LABEL"/>
+        <DISPLAYWIDTH
+          Value="20"/>
+        <DISPLAYHEIGHT
+          Value="2"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -178,6 +222,18 @@
     AssociationOtherEnd="HrBCmodel.bc.associations.PassportInfoFk1Assoc.PassportInfo"
     Type="model.shared.extensions.ExtEntityImpl"
     IsUpdateable="true"/>
+  <Key
+    Name="PassportInfoIssuingAuthorityCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"ISSUING_AUTHORITY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="PASSPORT_INFO_ISSUING_AUTHORIT"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.PassportInfo.IssuingAuthority"/>
+    </AttrArray>
+  </Key>
   <Key
     Name="PassportInfoPk"
     PrimaryKey="true">

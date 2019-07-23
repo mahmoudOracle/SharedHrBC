@@ -83,6 +83,8 @@
           ResId="HrBCmodel.bc.entities.EmployeeEducation.InstitutionName_LABEL"/>
         <DISPLAYWIDTH
           Value="100"/>
+        <DISPLAYHEIGHT
+          Value="2"/>
       </SchemaBasedProperties>
     </Properties>
   </Attribute>
@@ -103,6 +105,24 @@
           ResId="HrBCmodel.bc.entities.EmployeeEducation.StartDate_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:CompareValidationBean
+      Name="StartDateRule0"
+      ResId="HrBCmodel.bc.entities.EmployeeEducation.StartDate_Rule_0"
+      OnAttribute="StartDate"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="LESSTHAN">
+      <validation:ResExpressions
+        Name="StartDateRule0_ResExprList">
+        <validation:Expression
+          Name="1"
+          trustMode="untrusted"
+          CodeSourceName="EmployeeEducationRow"/>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="GraduationDate"
@@ -142,6 +162,12 @@
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
+    <Properties>
+      <SchemaBasedProperties>
+        <LABEL
+          ResId="HrBCmodel.bc.entities.EmployeeEducation.GradutaionDegree_LABEL"/>
+      </SchemaBasedProperties>
+    </Properties>
   </Attribute>
   <Attribute
     Name="Major"
@@ -150,7 +176,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="EMPLOYEE_EDUCATION">
+    TableName="EMPLOYEE_EDUCATION"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -242,6 +269,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="HrBCmodel.bc.entities.EmployeeEducation.EmployeeEducationId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="EmployeeEducationMajorCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"MAJOR" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="EMPLOYEE_EDUCATION_MAJOR_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.EmployeeEducation.Major"/>
     </AttrArray>
   </Key>
   <Key

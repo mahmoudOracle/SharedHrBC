@@ -1,0 +1,19 @@
+//Groovy Scripts for HrBCmodel.bc.entities.PassportInfo
+
+package HrBCmodel.bc.entities
+
+import oracle.jbo.script.annotation.MessageParameterExpression;
+
+@MessageParameterExpression(validatorName="IssueDateRule0", name="ResExpressions_1", attributeName="IssueDate")
+def IssueDate_IssueDateRule0_ResExpressions_1_MessageParameterValues()
+{
+newValue
+}
+
+
+@MessageParameterExpression(validatorName="ExpirationDateRule0", name="ResExpressions_1", attributeName="ExpirationDate")
+def ExpirationDate_ExpirationDateRule0_ResExpressions_1_MessageParameterValues()
+{
+newValue
+}
+

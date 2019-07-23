@@ -1,0 +1,12 @@
+//Groovy Scripts for HrBCmodel.bc.entities.Dependents
+
+package HrBCmodel.bc.entities
+
+import oracle.jbo.script.annotation.MessageParameterExpression;
+
+@MessageParameterExpression(validatorName="DobRule0", name="ResExpressions_1", attributeName="Dob")
+def Dob_DobRule0_ResExpressions_1_MessageParameterValues()
+{
+newValue
+}
+

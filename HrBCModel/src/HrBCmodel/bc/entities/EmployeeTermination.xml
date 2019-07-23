@@ -93,6 +93,24 @@
         trustMode="untrusted"
         CodeSourceName="EmployeeTerminationRow"/>
     </validation:CompareValidationBean>
+    <validation:CompareValidationBean
+      Name="TerminationDateRule1"
+      ResId="HrBCmodel.bc.entities.EmployeeTermination.TerminationDate_Rule_1"
+      OnAttribute="TerminationDate"
+      OperandType="EXPR"
+      Inverse="false"
+      CompareType="LESSTHANEQUALTO">
+      <validation:ResExpressions
+        Name="TerminationDateRule1_ResExprList">
+        <validation:Expression
+          Name="1"
+          trustMode="untrusted"
+          CodeSourceName="EmployeeTerminationRow"/>
+      </validation:ResExpressions>
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
+    </validation:CompareValidationBean>
   </Attribute>
   <Attribute
     Name="TerminationReasonDetails"

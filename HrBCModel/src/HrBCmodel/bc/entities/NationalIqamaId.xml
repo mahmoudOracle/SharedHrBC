@@ -141,7 +141,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="NATIONAL_IQAMA_ID">
+    TableName="NATIONAL_IQAMA_ID"
+    IsNotNull="true">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
@@ -224,6 +225,18 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="HrBCmodel.bc.entities.NationalIqamaId.NationalidIqamaInfo"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="NationalIqamaIdIssuePlaceCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"ISSUE_PLACE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="NATIONAL_IQAMA_ID_ISSUE_PLACE_"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="HrBCmodel.bc.entities.NationalIqamaId.IssuePlace"/>
     </AttrArray>
   </Key>
   <Key

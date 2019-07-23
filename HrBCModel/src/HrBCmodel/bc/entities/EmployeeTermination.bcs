@@ -3,10 +3,18 @@
 package HrBCmodel.bc.entities
 
 import oracle.jbo.script.annotation.ValidatorExpression;
+import oracle.jbo.script.annotation.MessageParameterExpression;
 
 @ValidatorExpression(name="TerminationDateRule0", attributeName="TerminationDate")
 def TerminationDate_TerminationDateRule0_ValidationRuleScript_ValidationRule()
 {
 adf.currentDate
+}
+
+
+@MessageParameterExpression(validatorName="TerminationDateRule1", name="ResExpressions_1", attributeName="TerminationDate")
+def TerminationDate_TerminationDateRule1_ResExpressions_1_MessageParameterValues()
+{
+newValue
 }
 
