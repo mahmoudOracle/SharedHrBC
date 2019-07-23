@@ -533,12 +533,6 @@
     EntityUsage="Employees"
     AliasName="VERSION"
     IsUpdateable="false"/>
-  <ViewAttribute
-    Name="JobPayTypeId"
-    PrecisionRule="true"
-    EntityAttrName="JobPayTypeId"
-    EntityUsage="Employees"
-    AliasName="JOB_PAY_TYPE_ID"/>
   <ViewLinkAccessor
     Name="DisciplinaryIncidentView"
     ViewLink="HrBCmodel.bc.viewLinks.DisciplinaryIncidentFk1Link"
