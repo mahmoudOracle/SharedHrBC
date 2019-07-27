@@ -11,7 +11,8 @@
   AliasName="CompaniesContactPersons"
   BindingStyle="OracleName"
   RowClass="model.shared.extensions.ExtEntityImpl"
-  DefClass="model.shared.extensions.ExtEntityDefImpl">
+  DefClass="model.shared.extensions.ExtEntityDefImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="CompaniesContactPersonId"
     IsNotNull="true"
@@ -109,6 +110,12 @@
           Value="30"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:RegExpValidationBean
+      Name="EmailRule0"
+      OnAttribute="Email"
+      Pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+      Inverse="false"
+      ResId="HrBCmodel.bc.entities.CompaniesContactPersons.Email_Rule_0"/>
   </Attribute>
   <Attribute
     Name="Phone"

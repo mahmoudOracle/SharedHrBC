@@ -142,14 +142,14 @@
           ResId="HrBCmodel.bc.entities.EmployeeEducation.GraduationDate_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
-    <validation:CompareValidationBean
+    <validation:ExpressionValidationBean
       Name="GraduationDateRule0"
-      ResId="HrBCmodel.bc.entities.EmployeeEducation.GraduationDate_Rule_0"
-      OnAttribute="GraduationDate"
-      OperandType="JBO"
-      Inverse="false"
-      CompareType="GREATERTHAN"
-      CompareValue="HrBCmodel.bc.views.EmployeeEducationView.StartDate"/>
+      OperandType="EXPR"
+      Inverse="false">
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[if (newValue != null) {return newValue < adf.currentDate && newValue > StartDate} else return true;]]></validation:TransientExpression>
+    </validation:ExpressionValidationBean>
   </Attribute>
   <Attribute
     Name="GradutaionDegree"

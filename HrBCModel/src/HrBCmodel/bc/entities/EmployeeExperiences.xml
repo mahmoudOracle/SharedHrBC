@@ -159,14 +159,14 @@
           ResId="HrBCmodel.bc.entities.EmployeeCourses.EndDate_LABEL"/>
       </SchemaBasedProperties>
     </Properties>
-    <validation:CompareValidationBean
-      Name="EndDateRule0"
-      ResId="HrBCmodel.bc.entities.EmployeeExperiences.EndDate_Rule_0"
-      OnAttribute="EndDate"
-      OperandType="JBO"
-      Inverse="false"
-      CompareType="GREATERTHAN"
-      CompareValue="HrBCmodel.bc.views.EmployeeExperiencesView.StartDate"/>
+    <validation:ExpressionValidationBean
+      Name="EndDateRule1"
+      OperandType="EXPR"
+      Inverse="false">
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"><![CDATA[if (newValue != null) {return newValue < adf.currentDate && newValue > StartDate} else return true;]]></validation:TransientExpression>
+    </validation:ExpressionValidationBean>
   </Attribute>
   <Attribute
     Name="Comments"

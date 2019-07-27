@@ -131,7 +131,9 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="DRIVING_LICENSE">
+    TableName="DRIVING_LICENSE"
+    IsUpdateable="while_insert"
+    HistoryColumn="UserHistory">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -142,7 +144,9 @@
     SQLType="DATE"
     Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
-    TableName="DRIVING_LICENSE"/>
+    TableName="DRIVING_LICENSE"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="ModifiedBy"
     Precision="20"
@@ -150,7 +154,8 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="DRIVING_LICENSE">
+    TableName="DRIVING_LICENSE"
+    HistoryColumn="UserHistory">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="20"/>
     </DesignTime>
@@ -161,7 +166,8 @@
     SQLType="DATE"
     Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
-    TableName="DRIVING_LICENSE"/>
+    TableName="DRIVING_LICENSE"
+    HistoryColumn="DateHistory"/>
   <Attribute
     Name="Version"
     ColumnName="VERSION"
@@ -169,7 +175,8 @@
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="DRIVING_LICENSE"
-    ChangeIndicator="true"/>
+    ChangeIndicator="true"
+    HistoryColumn="VersionHistory"/>
   <AccessorAttribute
     Name="Employees"
     Association="HrBCmodel.bc.associations.DrivingLicenseFk1Assoc"
