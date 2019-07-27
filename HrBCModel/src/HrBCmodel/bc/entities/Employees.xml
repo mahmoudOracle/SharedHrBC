@@ -348,6 +348,15 @@
           Value="20"/>
       </SchemaBasedProperties>
     </Properties>
+    <validation:ExpressionValidationBean
+      Name="HireDateRule0"
+      OperandType="EXPR"
+      Inverse="false">
+      <validation:TransientExpression
+        trustMode="untrusted"
+        Name="ValidationRuleScript"
+        CodeSourceName="EmployeesRow"/>
+    </validation:ExpressionValidationBean>
   </Attribute>
   <Attribute
     Name="JobId"

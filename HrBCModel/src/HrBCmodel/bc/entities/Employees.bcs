@@ -18,3 +18,10 @@ def HireDate_ExpressionScript_Expression()
 adf.currentDate
 }
 
+
+@ValidatorExpression(name="HireDateRule0", attributeName="HireDate")
+def HireDate_HireDateRule0_ValidationRuleScript_ValidationRule()
+{
+if (newValue != null && DateOfBirth != null) {return newValue <= adf.currentDate && newValue > DateOfBirth} else return true;
+}
+

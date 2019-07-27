@@ -129,13 +129,6 @@
       OperandType="EXPR"
       Inverse="false"
       CompareType="LESSTHAN">
-      <validation:ResExpressions
-        Name="StartDateRule0_ResExprList">
-        <validation:Expression
-          Name="1"
-          trustMode="untrusted"
-          CodeSourceName="EmployeeExperiencesRow"/>
-      </validation:ResExpressions>
       <validation:TransientExpression
         trustMode="untrusted"
         Name="ValidationRuleScript"><![CDATA[adf.currentDate]]></validation:TransientExpression>
@@ -165,7 +158,7 @@
       Inverse="false">
       <validation:TransientExpression
         trustMode="untrusted"
-        Name="ValidationRuleScript"><![CDATA[if (newValue != null) {return newValue < adf.currentDate && newValue > StartDate} else return true;]]></validation:TransientExpression>
+        Name="ValidationRuleScript"><![CDATA[if (newValue != null && StartDate != null) {return newValue < adf.currentDate && newValue > StartDate} else return true;]]></validation:TransientExpression>
     </validation:ExpressionValidationBean>
   </Attribute>
   <Attribute

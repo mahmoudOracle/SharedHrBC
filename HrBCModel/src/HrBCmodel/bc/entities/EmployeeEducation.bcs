@@ -3,10 +3,14 @@
 package HrBCmodel.bc.entities
 
 import oracle.jbo.script.annotation.MessageParameterExpression;
+import oracle.jbo.script.annotation.ValidatorExpression;
 
-@MessageParameterExpression(validatorName="StartDateRule0", name="ResExpressions_1", attributeName="StartDate")
-def StartDate_StartDateRule0_ResExpressions_1_MessageParameterValues()
+
+
+
+@ValidatorExpression(name="GraduationDateRule0", attributeName="GraduationDate")
+def GraduationDate_GraduationDateRule0_ValidationRuleScript_ValidationRule()
 {
-newValue
+if (newValue != null && StartDate != null) {return newValue < adf.currentDate && newValue > StartDate} else return true;
 }
 
