@@ -43,7 +43,7 @@
     <Item Value="Id"/>
   </AttrArray>
   <StaticList
-    Rows="6"
+    Rows="10"
     Columns="2"/>
   <ResourceBundle>
     <PropertiesBundle

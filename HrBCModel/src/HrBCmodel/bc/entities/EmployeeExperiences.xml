@@ -248,7 +248,8 @@
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
     TableName="EMPLOYEE_EXPERIENCES"
-    HistoryColumn="VersionHistory"/>
+    HistoryColumn="VersionHistory"
+    ChangeIndicator="true"/>
   <AccessorAttribute
     Name="Address"
     Association="HrBCmodel.bc.associations.EmployeeExperiencesFk1Assoc"

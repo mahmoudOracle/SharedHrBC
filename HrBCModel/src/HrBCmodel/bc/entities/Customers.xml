@@ -222,13 +222,6 @@
     Type="model.shared.extensions.ExtEntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="Countries"
-    Association="HrBCmodel.bc.associations.CustomersFk2Assoc"
-    AssociationEnd="HrBCmodel.bc.associations.CustomersFk2Assoc.Countries"
-    AssociationOtherEnd="HrBCmodel.bc.associations.CustomersFk2Assoc.Customers"
-    Type="model.shared.extensions.ExtEntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="DisciplinaryIncident"
     Association="HrBCmodel.bc.associations.DisciplinaryIncidentFk2Assoc"
     AssociationEnd="HrBCmodel.bc.associations.DisciplinaryIncidentFk2Assoc.DisciplinaryIncident"

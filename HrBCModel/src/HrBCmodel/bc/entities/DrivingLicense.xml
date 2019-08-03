@@ -76,7 +76,7 @@
       OnAttribute="IssueDate"
       OperandType="EXPR"
       Inverse="false"
-      CompareType="LESSTHAN">
+      CompareType="LESSTHANEQUALTO">
       <validation:ResExpressions
         Name="IssueDateRule0_ResExprList">
         <validation:Expression

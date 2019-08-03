@@ -76,7 +76,8 @@
     SQLType="NUMERIC"
     Type="oracle.jbo.domain.Number"
     ColumnType="NUMBER"
-    TableName="EMPLOYEE_LEAVE_HISTORY"/>
+    TableName="EMPLOYEE_LEAVE_HISTORY"
+    ChangeIndicator="true"/>
   <AccessorAttribute
     Name="LeaveRequest"
     Association="HrBCmodel.bc.associations.EmpLeaveHistoryFk1Assoc"

@@ -19,7 +19,6 @@
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
       <Attr Name="_finderName" Value="Employees"/>
-      <Attr Name="_foreignKey" Value="HrBCmodel.bc.entities.Employees.EmployeesPk"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="HrBCmodel.bc.entities.Employees.EmployeeId"/>
@@ -33,7 +32,6 @@
       <Attr Name="_isUpdateable" Value="true"/>
       <Attr Name="_aggregation" Value="0"/>
       <Attr Name="_finderName" Value="EmpCars"/>
-      <Attr Name="_foreignKey" Value="HrBCmodel.bc.entities.EmpCars.fk_EmpCars"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="HrBCmodel.bc.entities.EmpCars.EmpId"/>

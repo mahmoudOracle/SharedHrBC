@@ -210,13 +210,6 @@
     Type="model.shared.extensions.ExtEntityImpl"
     IsUpdateable="true"/>
   <AccessorAttribute
-    Name="Countries"
-    Association="HrBCmodel.bc.associations.AddressFk1Assoc"
-    AssociationEnd="HrBCmodel.bc.associations.AddressFk1Assoc.Countries"
-    AssociationOtherEnd="HrBCmodel.bc.associations.AddressFk1Assoc.Address"
-    Type="model.shared.extensions.ExtEntityImpl"
-    IsUpdateable="true"/>
-  <AccessorAttribute
     Name="CourseInstitutions"
     Association="HrBCmodel.bc.associations.CourseInstitutionsFk1Assoc"
     AssociationEnd="HrBCmodel.bc.associations.CourseInstitutionsFk1Assoc.CourseInstitutions"
@@ -273,17 +266,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="HrBCmodel.bc.entities.Address.AddressId"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="AddressFk1">
-    <DesignTime>
-      <Attr Name="_referencedKey" Value="COUNTRIES_PK"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="ADDRESS_FK1"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="HrBCmodel.bc.entities.Address.CountryId"/>
     </AttrArray>
   </Key>
   <Key

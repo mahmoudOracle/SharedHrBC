@@ -61,6 +61,59 @@
     Type="oracle.jbo.domain.Date"
     ColumnType="DATE"
     TableName="EMP_CARS"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="20"
+    ColumnName="CREATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMP_CARS"
+    IsUpdateable="while_insert"
+    HistoryColumn="UserHistory">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedOn"
+    ColumnName="CREATED_ON"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="EMP_CARS"
+    IsUpdateable="while_insert"
+    HistoryColumn="DateHistory"/>
+  <Attribute
+    Name="ModifiedBy"
+    Precision="20"
+    ColumnName="MODIFIED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="EMP_CARS"
+    HistoryColumn="UserHistory">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModifiedOn"
+    ColumnName="MODIFIED_ON"
+    SQLType="DATE"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="EMP_CARS"
+    HistoryColumn="DateHistory"/>
+  <Attribute
+    Name="Version"
+    ColumnName="VERSION"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="EMP_CARS"
+    HistoryColumn="VersionHistory"
+    ChangeIndicator="true"/>
   <AccessorAttribute
     Name="Employees"
     Association="HrBCmodel.bc.associations.EmpCarsFk1Assoc"
@@ -102,28 +155,6 @@
       <Attr Name="_referencedKey" Value="CARS_PK"/>
       <Attr Name="_isForeign" Value="true"/>
       <Attr Name="_DBObjectName" Value="EMP_CARS_FK2"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="HrBCmodel.bc.entities.EmpCars.CarId"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="fk_EmpCars">
-    <DesignTime>
-      <Attr Name="_referencedKey" Value="EMPLOYEES_PK"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="FK_EMP_CARS"/>
-    </DesignTime>
-    <AttrArray Name="Attributes">
-      <Item Value="HrBCmodel.bc.entities.EmpCars.EmpId"/>
-    </AttrArray>
-  </Key>
-  <Key
-    Name="fk_EmpCars1">
-    <DesignTime>
-      <Attr Name="_referencedKey" Value="CARS_PK"/>
-      <Attr Name="_isForeign" Value="true"/>
-      <Attr Name="_DBObjectName" Value="FK_EMP_CARS1"/>
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="HrBCmodel.bc.entities.EmpCars.CarId"/>
